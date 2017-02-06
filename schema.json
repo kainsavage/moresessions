@@ -1,0 +1,27 @@
+[
+  {
+   "namespace": "moresessions",
+   "description": "Extending existing sessions namespace",
+  
+  "permissions": ["experiments.moresessions"],
+
+  "functions": [
+    {
+      "name": "forgetClosedTab",
+      "type": "function",
+      "description": "Forgets a closed tab",
+      "async": true,
+      "parameters": [
+        {
+          "name": "windowId",
+          "type": "integer"
+        },
+        {
+          "name": "tabIndex",
+          "type": "integer"
+        }
+      ]
+    }
+   ]
+  }
+]
