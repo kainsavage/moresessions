@@ -8,9 +8,15 @@ class API extends ExtensionAPI {
   getAPI(context) {
     return {
       moresessions: {
-        async forgetClosedTab(windowId, tabIndex) {
-          sessionStore.forgetClosedTab(
-            context.extension.windowManager.get(windowId).window, tabIndex);
+        async forgetClosedTab(tab) {
+          let aWindow = context.extension.windowManager.get(tab.windowId).window;
+          let closedTabData = JSON.parse(sessionStore.getClosedTabData(aWindow));
+
+          let closedTabIndex = closedTabData.findIndex( (aClosedTab) => { 
+            return aClosedTab.closedId == tab.sessionId 
+          });
+
+          sessionStore.forgetClosedTab(aWindow, closedTabIndex);
         }
       }
     };

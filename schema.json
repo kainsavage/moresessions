@@ -3,24 +3,18 @@
    "namespace": "moresessions",
    "description": "Extending existing sessions namespace",
   
-  "permissions": ["experiments.moresessions"],
+  "permissions": ["experiments.moresessions", "tabs"],
 
   "functions": [
     {
       "name": "forgetClosedTab",
       "type": "function",
-      "description": "Forgets a closed tab",
+      "description": "Attempts to forget a recently closed tab.",
       "async": true,
       "parameters": [
         {
-          "name": "windowId",
-          "type": "integer",
-          "optional": false,
-          "description": ""
-        },
-        {
-          "name": "tabIndex",
-          "type": "integer",
+          "$ref": "tabs.Tab",
+          "name": "tab",
           "optional": false,
           "description": ""
         }
