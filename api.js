@@ -13,7 +13,7 @@ class API extends ExtensionAPI {
           let closedTabData = JSON.parse(sessionStore.getClosedTabData(aWindow));
 
           let closedTabIndex = closedTabData.findIndex( (aClosedTab) => { 
-            return aClosedTab.sessionId == sessionId 
+            return aClosedTab.closedId == parseInt(sessionId)
           });
 
           sessionStore.forgetClosedTab(aWindow, closedTabIndex);

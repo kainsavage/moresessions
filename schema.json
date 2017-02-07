@@ -20,7 +20,7 @@
         },
         {
           "name": "sessionId",
-          "type": "integer",
+          "type": "string",
           "optional": false,
           "description": ""
         }
