@@ -16,13 +16,13 @@
           "name": "windowId",
           "type": "integer",
           "optional": false,
-          "description": ""
+          "description": "The window to which the recently closed tab to be forgotten belongs."
         },
         {
           "name": "sessionId",
           "type": "string",
           "optional": false,
-          "description": ""
+          "description": "The sessionId (closedId) of the recently closed tab to be forgotten."
         }
       ]
     },
@@ -36,7 +36,7 @@
           "name": "sessionId",
           "type": "string",
           "optional": false,
-          "description": ""
+          "description": "The sessionId (closedId) of the recently closed window to be forgotten."
         }
       ]
     }
