@@ -17,6 +17,16 @@ class API extends ExtensionAPI {
           });
 
           sessionStore.forgetClosedTab(aWindow, closedTabIndex);
+        },
+
+        async forgetClosedWindow(sessionId) {
+          let closedWindowData = JSON.parse(sessionStore.getClosedWindowData());
+
+          let closedWindowIndex = closedWindowData.findIndex( (aClosedWindow) => { 
+            return aClosedWindow.closedId == parseInt(sessionId)
+          });
+
+          sessionStore.forgetClosedWindow(closedWindowIndex);
         }
       }
     };

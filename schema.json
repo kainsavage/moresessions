@@ -25,6 +25,20 @@
           "description": ""
         }
       ]
+    },
+    {
+      "name": "forgetClosedWindow",
+      "type": "function",
+      "description": "Attempts to forget a recently closed window.",
+      "async": true,
+      "parameters": [
+        {
+          "name": "sessionId",
+          "type": "string",
+          "optional": false,
+          "description": ""
+        }
+      ]
     }
    ]
   }
