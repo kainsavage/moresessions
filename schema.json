@@ -13,8 +13,14 @@
       "async": true,
       "parameters": [
         {
-          "$ref": "tabs.Tab",
-          "name": "tab",
+          "name": "windowId",
+          "type": "integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "sessionId",
+          "type": "integer",
           "optional": false,
           "description": ""
         }
