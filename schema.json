@@ -3,7 +3,7 @@
    "namespace": "moresessions",
    "description": "Extending existing sessions namespace",
   
-  "permissions": ["experiments.moresessions", "tabs"],
+  "permissions": ["experiments.moresessions"],
 
   "functions": [
     {
