@@ -14,11 +14,15 @@
       "parameters": [
         {
           "name": "windowId",
-          "type": "integer"
+          "type": "integer",
+          "optional": false,
+          "description": ""
         },
         {
           "name": "tabIndex",
-          "type": "integer"
+          "type": "integer",
+          "optional": false,
+          "description": ""
         }
       ]
     }
